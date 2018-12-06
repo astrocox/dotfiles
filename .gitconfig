@@ -1,0 +1,41 @@
+[user]
+	name = Julia Cox
+    email = 41338503+astrocox@users.noreply.github.com
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    lg = log --format=\"%Cgreen %h %C(yellow) %an %Creset| %s\" --graph
+    sh = show --pretty="format:" --name-only
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    setup = branch --set-upstream
+[core]
+    editor = /usr/bin/vim
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[format]
+    pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[branch]
+    # always setup 'git pull' to rebase instead of merge
+    autosetuprebase = always
+[push]
+    default = upstream
+
+[merge]
+    tool = opendiff
+[credential]
+	helper = osxkeychain
+[diff "nb2md"]
+	textconv = nb2md
